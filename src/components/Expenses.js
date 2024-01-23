@@ -13,7 +13,7 @@ function Expenses(){
           price: 99.99
         }
     ]
-    
+
     return(
         <div className='expenses'>
             <ExpenseItem
@@ -25,3 +25,5 @@ function Expenses(){
         </div>
     )
 }
+
+export default Expenses
