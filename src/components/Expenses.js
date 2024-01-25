@@ -16,7 +16,7 @@ function Expenses(){
     ]
 
     return(
-        <div className='card expenses'>
+        <div className='expenses'>
             <ExpenseItem
             expenseData={expenses[0]}
             />

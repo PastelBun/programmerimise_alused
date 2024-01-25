@@ -4,7 +4,7 @@ import ExpenseDate from './ExpenseDate'
 function ExpenseItem(props){
     
     return(
-        <div className='card expense-item'>
+        <div className='expense-item'>
             <ExpenseDate 
                 date={props.expenseData.date}
             />
