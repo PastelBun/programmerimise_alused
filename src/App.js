@@ -1,14 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 import Expenses from './components/Expenses';
+import Card from './components/Card'
 
 function App() {
   return (
-    <div className="App">
+    <Card className="App">
       <Expenses
       expenses={Expenses}
        />
-    </div>
+    </Card>
   );
 }
 
