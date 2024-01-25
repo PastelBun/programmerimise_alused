@@ -16,7 +16,7 @@ function Expenses(){
           price: 99.99
         }
     ]
-
+    
     return(
         <Card className='expenses'>
             <ExpenseItem
