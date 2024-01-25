@@ -4,11 +4,11 @@ import Expenses from './components/Expenses';
 
 function App() {
   return (
-    <Card className="App">
+    <div className="App">
       <Expenses
       expenses={Expenses}
        />
-    </Card>
+    </div>
   );
 }
 
