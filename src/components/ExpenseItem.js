@@ -4,6 +4,7 @@ import Card from './UI/Card'
 import{ useState } from 'react' 
 
 const ExpenseItem=(props)=>{
+    const[title, setTitle]= useState(props.expenseData.title)
     const clickHandler=()=>{
         console.log('Clicked!')
         setTitle (`Updated by click ${title}`)
