@@ -21,6 +21,7 @@ const submitHandler=(event)=>{
         amount: enteredAmount,
         date: new Date(enteredDate)
     } 
+    props.onSaveExpenseData(expenseData)
     setEnteredTitle('')
     setEnteredAmount('')
     setEnteredDate('')
