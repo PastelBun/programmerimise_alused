@@ -8,7 +8,6 @@ const ExpenseForm =(props)=>{
 
 const titleChangeHandler=(event)=>{
     setEnteredTitle(event.target.value)
-    console.log(event)
 } 
 const amountChangeHandler=(event)=>{
     setEnteredAmount(event.target.value)
@@ -16,24 +15,37 @@ const amountChangeHandler=(event)=>{
 const dateChangeHandler=(event)=>{
     setEnteredDate(event.target.value)
 } 
+const submitHandler=(event)=>{
+    const expenseData={
+        title: enteredTitle,
+        amount: enteredAmount,
+        date: new Date(enteredDate)
+    } 
+    setEnteredTitle('')
+    setEnteredAmount('')
+    setEnteredDate('')
+} 
 
     return(
-        <form>
+        <form onSubmit={submitHandler}>
             <div className="new-expense__controls">
                 <div>
                     <label>Title</label>
                     <input type="text"
-                    onChange={titleChangeHandler}/>
+                    onChange={titleChangeHandler}
+                    value={enteredTitle}/> 
                 </div>
                 <div>
                     <label>Amount</label>
                     <input type="number" min="0.01" step="0.01"
-                    onChange={amountChangeHandler}/>
+                    onChange={amountChangeHandler}
+                    value={enteredAmount}/> 
                 </div>
                 <div>
                     <label>date</label>
                     <input type="date" min="2025-01-01" max="2027-01-31"
-                    onChange={dateChangeHandler}/>
+                    onChange={dateChangeHandler}
+                    value={enteredDate}/>
                 </div>
             </div>
             <div className="new-expense__actions">
