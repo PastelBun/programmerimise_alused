@@ -1,6 +1,6 @@
 import ExpenseItem from './ExpenseItem'
 import './Expenses.css'
-import Card from './UI/Card'
+import Card from './components/UI/Card'
 
 
 const Expenses=()=>{

@@ -1,5 +1,5 @@
 import ExpenseForm from './ExpenseForm'
-import '.NewExpense.css'
+import './NewExpense.css'
 
 const NewExpense=(props)=>{
     return(
@@ -8,3 +8,5 @@ const NewExpense=(props)=>{
         </div>
     )
 }  
+
+export default NewExpense

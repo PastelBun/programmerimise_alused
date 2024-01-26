@@ -1,3 +1,5 @@
+import './ExpenseForm.css'
+
 const ExpenseForm =(props)=>{
     return(
         <form>
@@ -21,3 +23,4 @@ const ExpenseForm =(props)=>{
         </form>
     )
 } 
+export default ExpenseForm
