@@ -24,7 +24,7 @@ const App=()=> {
     <div className="App">
       <NewExpense onAddExpense={addExpenseHandler} ></NewExpense>
       <Expenses
-      expenses={Expenses}
+      expenses={expenses}
        />
     </div>
   );
