@@ -4,18 +4,7 @@ import Card from '../UI/Card'
 
 
 const Expenses=()=>{
-    const expenses=[
-        {
-          date: new Date(2023, 9, 6),
-          title:'New book',
-          price:30.99
-        },
-        {
-          date: new Date(2023, 9, 6),
-          title: 'New jeans',
-          price: 99.99
-        }
-    ]
+    
     
     return(
         <Card className='expenses'>
