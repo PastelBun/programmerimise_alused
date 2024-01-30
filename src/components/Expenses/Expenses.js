@@ -1,15 +1,16 @@
+import React from 'react'
 import ExpenseItem from './ExpenseItem'
 import './Expenses.css'
 import Card from '../UI/Card'
-import React from 'react'
 import ExpensesFilter from './ExpensesFilter'
 
 const Expenses=(props)=>{
     /*const expenses=props;*/
-    props.React(expenses)
-    props.ExpensesFilter(ExpensesFilter)
+    const {expenses}=props;
+    
     return(
-    <ExpensesFilter>
+    <div>
+        <ExpensesFilter/>
         <Card className='expenses'>
             <ExpenseItem
             expenseData={expenses[0]}
@@ -18,8 +19,8 @@ const Expenses=(props)=>{
             expenseData={ expenses[1]}
             />
         </Card>
-    </ExpensesFilter>
-    )
+    </div>
+    );
 }
 
 export default Expenses
