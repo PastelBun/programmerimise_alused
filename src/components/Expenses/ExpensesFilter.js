@@ -1,9 +1,8 @@
-import React from 'react';
-
+import {useState} from 'react';
 import './ExpensesFilter.css';
 
-const ExpensesFilter = () => {
-    const YearSelectHandler=()=>(
+const ExpensesFilter = (props) => {
+    const YearSelectHandler=(event)=>(
         console.log(option.value)
     )
     return (
