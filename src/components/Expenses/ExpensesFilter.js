@@ -1,10 +1,10 @@
-import {useState} from 'react';
 import './ExpensesFilter.css';
 
-const ExpensesFilter = (props) => {
+const ExpensesFilter = () => {
     const YearSelectHandler=()=>{ 
         console.log('test')
-    } 
+    }
+
     return (
         <div className='expenses-filter'>
             <div className='expenses-filter__control'>
