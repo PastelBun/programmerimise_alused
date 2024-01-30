@@ -9,14 +9,16 @@ const Expenses=(props)=>{
     props.React(expenses)
     props.ExpensesFilter(ExpensesFilter)
     return(
+    <ExpensesFilter>
         <Card className='expenses'>
             <ExpenseItem
-            ExpensesFilter expenseData={expenses[0]}
+            expenseData={expenses[0]}
             />
             <ExpenseItem
-            ExpensesFilter expenseData={ expenses[1]}
+            expenseData={ expenses[1]}
             />
         </Card>
+    </ExpensesFilter>
     )
 }
 
