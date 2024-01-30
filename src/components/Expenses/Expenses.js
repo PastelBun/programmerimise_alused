@@ -16,11 +16,11 @@ const Expenses=(props)=>{
             <ExpensesFilter/>
             <ExpenseItem
             expenseData={expenses[0]}
-            value={expenseData.year} 
+            value={expenses.date.YEAR()} 
             />
             <ExpenseItem
             expenseData={ expenses[1]}
-            value={expenseData.year} 
+            value={expenses.date.YEAR()} 
             />
         </Card>
     );
