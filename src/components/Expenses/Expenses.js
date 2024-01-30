@@ -11,10 +11,10 @@ const Expenses=(props)=>{
     return(
         <Card className='expenses'>
             <ExpenseItem
-            expenseData={expenses[0]}
+            ExpensesFilter expenseData={expenses[0]}
             />
             <ExpenseItem
-            expenseData={ expenses[1]}
+            ExpensesFilter expenseData={ expenses[1]}
             />
         </Card>
     )
