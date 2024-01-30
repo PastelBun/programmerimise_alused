@@ -1,6 +1,8 @@
 import ExpenseItem from './ExpenseItem'
 import './Expenses.css'
 import Card from '../UI/Card'
+import expenseData from App
+import App from '../../App'
 
 
 const Expenses=()=>{
