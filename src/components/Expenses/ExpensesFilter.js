@@ -3,6 +3,9 @@ import React from 'react';
 import './ExpensesFilter.css';
 
 const ExpensesFilter = () => {
+    const YearHandler=(enteredYear)=>{
+        props.date.getFullYear()
+    } 
     return (
         <div className='expenses-filter'>
             <div className='expenses-filter__control'>

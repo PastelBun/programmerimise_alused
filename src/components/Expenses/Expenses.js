@@ -7,7 +7,7 @@ import ExpensesFilter from './ExpensesFilter'
 const Expenses=(props)=>{
     /*const expenses=props;*/
     const {expenses}=props;
-    
+    props.ExpensesFilter(YearHandler)
     return(
         <Card className='expenses'>
             <ExpensesFilter/>
