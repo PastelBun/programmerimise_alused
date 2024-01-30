@@ -3,7 +3,7 @@ import './ExpensesFilter.css';
 
 const ExpensesFilter = (props) => {
     const YearSelectHandler=(event)=>(
-        console.log(option.value)
+        console.log('test')
     )
     return (
         <div className='expenses-filter'>
