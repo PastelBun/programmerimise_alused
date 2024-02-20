@@ -12,13 +12,13 @@ const DYMMY_EXPENSES=[
   },
   {
     id:'id2',
-    date: new Date(2023, 9, 6),
+    date: new Date(2024, 9, 6),
     title: 'New jeans',
     price: 99.99
   },
   {
     id:'id3',
-    date: new Date(2023, 9, 25),
+    date: new Date(2025, 9, 25),
     title: 'New bag',
     price: 139.99
   }
