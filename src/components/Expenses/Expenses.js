@@ -20,13 +20,6 @@ const Expenses=(props)=>{
                     return <ExpenseItem expenseData={expense} key={expense.id}/>
                 })
             }
-            
-            /*<ExpenseItem
-            expenseData={expenses[0]} 
-            />
-            <ExpenseItem
-            expenseData={ expenses[1]}
-            />*/
         </Card>
     );
 }
