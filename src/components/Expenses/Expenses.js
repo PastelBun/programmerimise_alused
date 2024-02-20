@@ -9,16 +9,24 @@ const Expenses=(props)=>{
     /*const YearChangeHandler=(event)=>{
         setEnteredYear(event.target.value)
     } */
-    
+    props.expenses.map((expense)=>{
+        console.log(expense)
+    })
     return(
         <Card className='expenses'>
             <ExpensesFilter/>
-            <ExpenseItem
+            {
+                props.expenses.map((expense)=>{
+                    return <ExpenseItem expenseData={expense} key={expense.id}/>
+                })
+            }
+            
+            /*<ExpenseItem
             expenseData={expenses[0]} 
             />
             <ExpenseItem
             expenseData={ expenses[1]}
-            />
+            />*/
         </Card>
     );
 }
