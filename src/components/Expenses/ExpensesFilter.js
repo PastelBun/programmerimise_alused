@@ -2,7 +2,7 @@ import './ExpensesFilter.css';
 
 const ExpensesFilter = () => {
     const YearSelectHandler=()=>{ 
-        console.log(select.option.value)
+        console.log(option.value)
     }
 
     return (
