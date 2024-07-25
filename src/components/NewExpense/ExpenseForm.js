@@ -51,6 +51,7 @@ const submitHandler=(event)=>{
             </div>
             <div className="new-expense__actions">
                 <button type="submit">Add Expense</button>
+                <button type='button' onClick={props.onCancel}>Cancel</button>
             </div>
         </form>
     )
