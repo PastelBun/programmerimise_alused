@@ -11,16 +11,18 @@ const ExpenseItem=(props)=>{
         console.log(title)
     } 
     return(
-        <Card className='expense-item'>
-            <ExpenseDate 
+        <li>
+            <Card className='expense-item'>
+                <ExpenseDate 
                 date={props.expenseData.date}
-            />
-            <div className='expense-item__description'>
-                <h2>{props.expenseData.title}</h2>
-                <div className='expense-item__price'>{props.expenseData.price}</div>
-            </div>
+                />
+                <div className='expense-item__description'>
+                    <h2>{props.expenseData.title}</h2>
+                    <div className='expense-item__price'>{props.expenseData.price}</div>
+                </div>
             <button onClick={clickHandler}>Click Me</button>
-        </Card>
+            </Card>
+        </li>
     )
 }
 export default ExpenseItem
