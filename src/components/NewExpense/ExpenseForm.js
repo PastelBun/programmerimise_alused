@@ -1,30 +1,40 @@
-import { useState } from 'react'
+import { Fragment, useRef, useState } from 'react'
 import './ExpenseForm.css'
+import Error from '../UI/Error'
 
 const ExpenseForm =(props)=>{
-    const[enteredTitle, setEnteredTitle]=useState('')
-    const[enteredAmount, setEnteredAmount]=useState('')
-    const[enteredDate, setEnteredDate]=useState('')
 
-const titleChangeHandler=(event)=>{
-    setEnteredTitle(event.target.value)
-} 
-const amountChangeHandler=(event)=>{
-    setEnteredAmount(event.target.value)
-} 
-const dateChangeHandler=(event)=>{
-    setEnteredDate(event.target.value)
-} 
+const [error, setError]= useState(null)
+console.log(error)
+
+const titleInputRef = useRef()
+const amountInputRef = useRef()
+const dateInputRef = useRef()
+
 const submitHandler=(event)=>{
-    const expenseData={
+    const enteredTitle= titleInputRef.current.value
+    const enteredAmount= amountInputRef.current.value
+    const enteredDate= dateInputRef.current.value
+
+    event.preventDefault()
+
+    if(enteredTitle.trim().length=== 0 || enteredAmount.trim().length == 0 || enteredDate.trim().length== 0){
+        setError({
+            title: 'Invalid input',
+            message: 'Please enter a valid title, amount and/or date (currently one or more values are empty)'
+        })
+        return
+    }
+    const expenseData= {
         title: enteredTitle,
         amount: enteredAmount,
         date: new Date(enteredDate)
     } 
     props.onSaveExpenseData(expenseData)
-    setEnteredTitle('')
-    setEnteredAmount('')
-    setEnteredDate('')
+    props.onCancel()
+    titleInputRef.current.value= ''
+    amountInputRef.current.value= ''
+    dateInputRef.current.value= ''
 } 
 
     return(
@@ -34,22 +44,22 @@ const submitHandler=(event)=>{
                     <label>Title</label>                   
                     <br/>
                     <input type="text"
-                    onChange={titleChangeHandler}
-                    value={enteredTitle}/> 
+                    id='title'
+                    ref={titleInputRef}/>
                 </div>
                 <div className='new-expense__control'>
                     <label>Amount</label>
                     <br/>
                     <input type="number" min="0.01" step="0.01"
-                    onChange={amountChangeHandler}
-                    value={enteredAmount}/> 
+                    id='amount'
+                    ref={amountInputRef}/>
                 </div>
                 <div className='new-expense__control'>
                     <label>Date</label>
                     <br/>
                     <input type="date" min="2024-01-01" max="2026-12-31"
-                    onChange={dateChangeHandler}
-                    value={enteredDate}/>
+                    id='date'
+                    ref={dateInputRef}/>
                 </div>
             </div>
             <div className="new-expense__actions">
