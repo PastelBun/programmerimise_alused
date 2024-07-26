@@ -1,14 +1,19 @@
 .new-expense__controls {
-    display: flex;
+    display: block;
     flex-wrap: wrap;
     gap: 1rem;
     margin-bottom: 1rem;
     text-align: left;
 }
 
+.new-expense__control{
+    display: block;
+}
+
 .new-expense__control label {
     font-weight: bold;
     margin-bottom: 0.5rem;
+    margin-top: 1rem;
     display: block;
 }
 
@@ -19,6 +24,7 @@
     border: 1px solid #ccc;
     width: 20rem;
     max-width: 100%;
+    display: block;
 }
 
 .new-expense__actions {

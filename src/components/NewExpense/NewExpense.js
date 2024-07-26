@@ -11,15 +11,18 @@ const NewExpense = (props) => {
             id: Math.random().toString(),
         };
         props.onAddExpense(expenseData);
-        setEditForm(false); // Close the form after saving
+        setEditForm(false);
+        console.log('edit form closed')
     };
 
     const addExpenseHandler = () => {
         setEditForm(true);
+        console.log('edit form opened');
     };
 
     const cancelExpenseHandler = () => {
         setEditForm(false);
+        console.log('edit form closed');
     };
 
     return (
