@@ -58,6 +58,7 @@ const submitHandler=(event)=>{
                             <br/>
                             <input type="text"
                             id='title'
+                            className='title'
                             ref={titleInputRef}/>
                         </div>
                         <div className='new-expense__control'>
@@ -65,6 +66,7 @@ const submitHandler=(event)=>{
                             <br/>
                             <input type="number" min="0.01" step="0.01"
                             id='amount'
+                            className='amount'
                             ref={amountInputRef}/>
                         </div>
                         <div className='new-expense__control'>
@@ -72,11 +74,12 @@ const submitHandler=(event)=>{
                             <br/>
                             <input type="date" min="2024-01-01" max="2026-12-31"
                             id='date'
+                            className='date'
                             ref={dateInputRef}/>
                         </div>
                     </div>
                     <div className="new-expense__actions">
-                        <button type="submit">Add Expense</button>
+                        <button type="submit" className='submit'>Add Expense</button>
                         <button type='button' onClick={props.onCancel}>Cancel</button>
                     </div>
                 </form>
