@@ -1,12 +1,9 @@
 
-it('opens the website', () => {
+it('adds expense', () => {
     cy.visit('http://localhost:3000')
-}),
-it('fills out the form with expense data', ()=>{
-    cy.get('new-expense__controls> input:first').type('cypress test')
-    cy.get('new-expense__controls> input:second').type('0.99')
-    cy.get('new-expense__controls> input:third').type('12.02.2026')
-}),
-it("presses add expense button", () => {
-    cy.get('new-expense__actions > button').click()
+    cy.get('button').should('have.text', 'Add New Expense').click()
+    cy.get('.title').type('cypress test')
+    cy.get('.amount').type('0.99')
+    cy.get('.date').type('2024-02-12')
+    cy.get('.submit').as('btn').click({multiple: true})    
 })
